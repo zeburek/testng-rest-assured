@@ -17,11 +17,11 @@ Structure:
 ```
 src/
 ├── main/
-│   ├── java/ru/zeburek/testngrestassured/ # REST API client here
-│   │   ├── types/ # JSON types schemas for using with GSON
-│   ├── resources/ # Config file for log4j2 here
+│   ├── java/ru/zeburek/testngrestassured/          # REST API client here
+│   │   ├── types/                                  # JSON types schemas for using with GSON
+│   ├── resources/                                  # Config file for log4j2 here
 ├── test/
-│   ├── java/ru/zeburek/testngrestassured/ # Tests and additional data here
+│   ├── java/ru/zeburek/testngrestassured/          # Tests and additional data here
 ```
 
 # Requirements
