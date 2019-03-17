@@ -1,0 +1,8 @@
+.gradle
+!gradle-wrapper.jar
+/build/
+/out/
+.allure
+
+*.class
+*.log
