@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.7.0"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'io.qameta.allure'
+
+group 'ru.zeburek'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile "io.rest-assured:rest-assured:3.3.0"
+    compile "io.qameta.allure:allure-testng:2.10.0"
+    compile "org.apache.logging.log4j:log4j-core:2.11.2"
+    compile "org.apache.logging.log4j:log4j-api:2.11.2"
+    compile "org.apache.logging.log4j:log4j-iostreams:2.11.2"
+    compile 'com.google.code.gson:gson:2.8.5'
+    testCompile 'com.github.javafaker:javafaker:0.17.2'
+    testCompile "org.testng:testng:6.14.3"
+}
+
+allure {
+    version = '2.10.0'
+    autoconfigure = true
+    aspectjweaver = true
+    resultsDir = file('build/allure-results')
+    reportDir = file('build/allure-reports')
+    allureJavaVersion = '2.10.0'
+}
+
+test{
+    useTestNG()
+}
